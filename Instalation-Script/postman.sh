@@ -6,8 +6,10 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
+username=$(id -u -n 1000)
+
 # Check if the Postman archive exists in Downloads
-if [[ ! -f ~/Downloads/Postman-linux-x64-7.32.0.tar.gz ]]; then
+if [[ ! -f /home/$username/Downloads/Postman-linux-x64.tar.gz ]]; then
   echo "Postman archive not found in Downloads. Please download and place it there."
   exit 1
 fi
@@ -16,10 +18,7 @@ fi
 mkdir -p /opt/apps/
 
 # Extract the archive
-tar -xzf ~/Downloads/Postman-linux-x64-7.32.0.tar.gz -C /opt/apps/
-
-# Move the extracted Postman directory to the installation directory
-mv /opt/apps/Postman-linux-x64-7.32.0 /opt/apps/Postman
+tar -xzf /home/$username/Downloads/Postman-linux-x64.tar.gz -C /opt/apps/
 
 # Create a symbolic link for convenient access
 ln -s /opt/apps/Postman/Postman /usr/local/bin/postman
