@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Update package lists
-sudo apt update
+sudo nala update
 
-sudo apt upgrade -y
+sudo nala upgrade -y
 
 sudo nala install gnome-tweaks -y
 
