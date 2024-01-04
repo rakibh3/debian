@@ -1,0 +1,9 @@
+[user]
+    email = hello.rakibh@gmail.com
+    name = Md Rakibul Hasan
+ 
+[github]
+    user = "rakibh3"
+ 
+[core]
+    sshCommand = "ssh -i ~/.ssh/rakibh3"

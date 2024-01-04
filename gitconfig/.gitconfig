@@ -1,0 +1,10 @@
+# ~/.gitconfig
+ 
+[includeIf "gitdir:~/Source/"]
+path = ~/.gitconfig.rakibh3
+ 
+#[includeIf "gitdir:~/Source/Level-2/test00/"]
+#path = ~/.gitconfig.rakibul03
+ 
+[core]
+excludesfile = ~/.gitignore      # valid everywhere
