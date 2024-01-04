@@ -17,4 +17,4 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 flatpak install flathub org.mozilla.firefox
 
-sudo cp -r $HOME/flathub/gitconfig $HOME
+sudo cp -r $HOME/flathub/gitconfig $HOME/
