@@ -1,21 +1,19 @@
 #!/bin/bash
 
-sudo nala install gnupg curl
+sudo apt-get install gnupg curl
 
-# Import the MongoDB GPG key
-curl -fsSL https://pgp.mongodb.com/server-6.0.asc | \
-  sudo gpg -o /usr/share/keyrings/mongodb-server-6.0.gpg \
-  --dearmor
+curl -fsSL https://pgp.mongodb.com/server-7.0.asc | \
+   sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \
+   --dearmor
 
-#curl -fsSL https://pgp.mongodb.com/server-7.0.asc |sudo gpg  --dearmor -o /etc/apt/trusted.gpg.d/mongodb-server-7.0.gpg
+echo "deb [ signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] http://repo.mongodb.org/apt/debian bullseye/mongodb-org/7.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
 
+sudo apt-get update
 
-# Create a list file for MongoDB
-echo "deb [ signed-by=/usr/share/keyrings/mongodb-server-6.0.gpg ] http://repo.mongodb.org/apt/debian bullseye/mongodb-org/6.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
-#echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
+sudo apt-get install -y mongodb-org
 
-# Update the package list
-sudo nala update
-
-# Install the MongoDB shell
-sudo nala install -y mongodb-org
+# sudo systemctl start mongod
+# sudo systemctl daemon-reload
+# sudo systemctl status mongod
+# sudo systemctl enable mongod
+# mongosh
