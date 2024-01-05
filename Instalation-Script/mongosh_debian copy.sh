@@ -10,6 +10,8 @@ echo "deb [ signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] http://repo.m
 
 sudo apt-get update
 
+#sudo nala install -y mongodb-mongosh-shared-openssl3
+
 sudo apt-get install -y mongodb-org
 
 # sudo systemctl start mongod
