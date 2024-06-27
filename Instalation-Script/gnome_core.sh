@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo nala --no-install-recommends install gnome-core
+sudo nala install --no-install-recommends gnome-core
