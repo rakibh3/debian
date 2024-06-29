@@ -8,12 +8,12 @@ fi
 
 # Install Postman (assuming the archive is in Downloads)
 username=$(id -u -n 1000)
-if [[ ! -f /home/$username/Downloads/Postman-linux-x64.tar.gz ]]; then
+if [[ ! -f /home/$username/Downloads/postman-linux-x64.tar.gz ]]; then
   echo "Postman archive not found in Downloads. Please download and place it there."
   exit 1
 fi
 mkdir -p /opt/apps/
-tar -xzf /home/$username/Downloads/Postman-linux-x64.tar.gz -C /opt/apps/
+tar -xzf /home/$username/Downloads/postman-linux-x64.tar.gz -C /opt/apps/
 ln -s /opt/apps/Postman/Postman /usr/local/bin/postman
 cat << EOF > /usr/share/applications/postman.desktop
 [Desktop Entry]
