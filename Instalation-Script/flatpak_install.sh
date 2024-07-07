@@ -16,5 +16,3 @@ sudo nala install flatpak gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo -y
 
 flatpak install flathub org.mozilla.firefox -y
-
-sudo cp -r $HOME/flathub/gitconfig/.* $HOME/
