@@ -27,7 +27,6 @@ echo \
 
 # Update package lists
 sudo nala update
-sudo apt update
 
 # Install the software
 sudo nala install brave-browser code codium docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
