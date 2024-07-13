@@ -1,9 +1,7 @@
 #!/bin/bash
 
 # Update package lists
-sudo nala update
-
-sudo nala upgrade -y
+sudo nala update && upgarde -y
 
 # Install Flatpak and Gnome Software plugin
 sudo nala install flatpak gnome-software-plugin-flatpak
