@@ -2,6 +2,8 @@
 
 # Update package lists
 echo "Updating package lists..."
+sudo apt install nala
+
 sudo nala update
 
 # Upgrade installed packages
