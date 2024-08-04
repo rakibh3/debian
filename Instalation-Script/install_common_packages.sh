@@ -6,8 +6,6 @@ sudo apt update && apt upgrade -y
 
 sudo apt install nala
 
-sudo nala update
-
 # Upgrade installed packages
 echo "Upgrading installed packages..."
 sudo nala upgrade -y
