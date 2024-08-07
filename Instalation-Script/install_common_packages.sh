@@ -6,6 +6,11 @@ sudo apt update && apt upgrade -y
 
 sudo apt install nala
 
+# Update package lists with nala
+echo "Updating package lists with nala..."
+sudo nala update
+sudo nala upgrade
+
 # Install common dependencies
 echo "Installing common packages..."
 sudo nala install -y \
