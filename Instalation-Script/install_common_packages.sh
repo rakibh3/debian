@@ -9,7 +9,7 @@ sudo apt install nala
 # Update package lists with nala
 echo "Updating package lists with nala..."
 sudo nala update
-sudo nala upgrade
+sudo nala upgrade -y
 
 # Install common dependencies
 echo "Installing common packages..."
