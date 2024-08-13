@@ -3,7 +3,6 @@
 # Update package lists
 echo "Updating package lists..."
 sudo apt update && apt upgrade -y
-
 sudo apt install nala
 
 # Update package lists with nala
@@ -19,8 +18,6 @@ sudo nala install -y \
     gnupg \
     apt-transport-https \
     ca-certificates \
-    gnome-software-plugin-flatpak \
-    flatpak \
     nala \
     git
 
