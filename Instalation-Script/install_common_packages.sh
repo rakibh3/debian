@@ -18,7 +18,6 @@ sudo nala install -y \
     gnupg \
     apt-transport-https \
     ca-certificates \
-    nala \
     git
 
 echo "Common packages installation complete."
