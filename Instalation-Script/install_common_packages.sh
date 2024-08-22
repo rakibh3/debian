@@ -14,6 +14,7 @@ sudo nala install -y \
     gnupg \
     apt-transport-https \
     ca-certificates \
-    git
+    git \
+    software-properties-common \
 
 echo "Common packages installation complete."
