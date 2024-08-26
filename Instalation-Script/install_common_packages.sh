@@ -1,11 +1,22 @@
 #!/bin/bash
 
+set -e  # Exit immediately if a command exits with a non-zero status
+
 # Update package lists
 echo "Updating package lists..."
-sudo apt update && apt upgrade -y
-sudo apt install nala
+sudo apt update
 
-# Install common dependencies
+# Upgrade installed packages
+echo "Upgrading installed packages..."
+sudo apt upgrade -y
+
+# Install nala if not already installed
+if ! command -v nala &> /dev/null; then
+    echo "Installing nala..."
+    sudo apt install -y nala
+fi
+
+# Use nala to install common dependencies
 echo "Installing common packages..."
 sudo nala install -y \
     curl \
@@ -15,6 +26,6 @@ sudo nala install -y \
     apt-transport-https \
     ca-certificates \
     git \
-    software-properties-common \
+    software-properties-common
 
 echo "Common packages installation complete."
