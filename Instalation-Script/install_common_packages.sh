@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e  # Exit immediately if a command exits with a non-zero status
-
 # Update package lists
 echo "Updating package lists..."
 sudo apt update
